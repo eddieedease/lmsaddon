@@ -1,0 +1,13 @@
+IMPORTANTEZZZZZ
+
+1. Grunt files
+    - serve
+    - build    (to dist folder)
+
+
+2. In het webservice file (dtswebservice)
+    - change the php api-path (for serve with localhost used with mamp)
+    - also in ‘ondersteuning.js’ for the update record
+
+
+3. adjust db.php && xyr.php

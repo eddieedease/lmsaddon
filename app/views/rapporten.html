@@ -1,0 +1,56 @@
+<h1 style="color:white">Rapporten</h1>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        <label for="sel1">Selecteer het op te maken rapport uit onderstaande lijst:</label>
+        <select ng-model="rapporten.currentCourse" ng-change="rapporten.setCourse(rapporten.currentCourse)" class="form-control">
+      <option ng-repeat="course in rapporten.coursess" value={{course.id}}>{{course.name}}</option>
+    </select>
+    </div>
+    <div style="padding:10px">
+        <!-- Table -->
+        <table class="table tabel-hover table-bordered">
+            <h3>Rapport
+                <small>
+          {{rapporten.datenow}}</small>
+            </h3>
+            <thead>
+                <tr class="info">
+                    <th>Naam</th>
+                    <th>Inlognaam</th>
+                    <th>Geslaagd</th>
+                    <th>Score</th>
+                    <th>Inlogsleutel</th>
+                    <th>Laatste Inlog</th>
+                    <th>Lid sinds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div>
+                    <tr ng-repeat="rap in rapporten.rapporten">
+                        <td>{{rap.realname}}</td>
+                        <td>{{rap.users_LOGIN}}</td>
+                        <td>{{rap.completed}}</td>
+                        <td>
+                            <b>
+                <div style="color:green" ng-if="rap.score >= 70">
+                  {{rap.score}}
+                </div>
+                <div style="color:red" ng-if="rap.score < 70">
+                  {{rap.score}}
+                </div>
+              </b>
+                        </td>
+                        <td>{{rap.sleutel}}</td>
+                        <td>{{rap.last_login}}</td>
+                        <td>{{rap.timestamp}}</td>
+                    </tr>
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+        {{rapporten.timez}}
+        <button class="btn btn-primary btn-lg" type="button" ng-csv="rapporten.rapcopy" csv-header="['sep=,']" field-separator="," filename="{{rapporten.nameCurrentCourse}} {{rapporten.datenow}}.csv">Download dit rapport</button>
+    </div>
+</div>

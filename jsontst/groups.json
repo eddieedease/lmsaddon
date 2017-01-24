@@ -1,0 +1,57 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'deb33813n2_dts'
+// deb33813n2_dts.groups
+
+[{
+  "id": 8,
+  "name": "groep",
+  "description": "groep",
+  "active": 1,
+  "dynamic": 0,
+  "created": null,
+  "user_types_ID": "1",
+  "languages_NAME": null,
+  "users_active": 0,
+  "assign_profile_to_new": 0,
+  "unique_key": "groepgroep",
+  "is_default": null,
+  "self_enroll": null,
+  "key_max_usage": 100,
+  "key_current_usage": 0
+}, {
+  "id": 9,
+  "name": "vette groep!",
+  "description": "sdfsd",
+  "active": 1,
+  "dynamic": 0,
+  "created": null,
+  "user_types_ID": "student",
+  "languages_NAME": null,
+  "users_active": 0,
+  "assign_profile_to_new": 0,
+  "unique_key": "24903657360f9a0b0484647082098dd9",
+  "is_default": null,
+  "self_enroll": null,
+  "key_max_usage": 0,
+  "key_current_usage": 0
+}, {
+  "id": 10,
+  "name": "Nog een groep",
+  "description": "safa",
+  "active": 1,
+  "dynamic": 0,
+  "created": null,
+  "user_types_ID": "0",
+  "languages_NAME": null,
+  "users_active": 0,
+  "assign_profile_to_new": 0,
+  "unique_key": "b93331377db9927bb69045f99c853f5e",
+  "is_default": null,
+  "self_enroll": null,
+  "key_max_usage": 0,
+  "key_current_usage": 0
+}]

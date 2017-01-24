@@ -1,0 +1,33 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'deb33813n2_dts'
+// deb33813n2_dts.users_to_courses
+
+[{
+  "users_LOGIN": "DTSlid",
+  "courses_ID": 7,
+  "active": 1,
+  "archive": 0,
+  "from_timestamp": 1448399211,
+  "user_type": "4",
+  "completed": 0,
+  "score": 0,
+  "issued_certificate": "",
+  "comments": "",
+  "to_timestamp": 0
+}, {
+  "users_LOGIN": "edease",
+  "courses_ID": 7,
+  "active": 1,
+  "archive": 0,
+  "from_timestamp": 1447765365,
+  "user_type": "student",
+  "completed": 0,
+  "score": 0,
+  "issued_certificate": "",
+  "comments": "",
+  "to_timestamp": 0
+}]

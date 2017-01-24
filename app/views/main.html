@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="card card-container">
+
+
+    <img style="padding-left:10px" src="images/dtslogo.png"/>
+    <div ng-show="main.fout" class="alert alert-warning alert-dismissible" role="alert">
+      <button ng-click="main.wegfout()" aria-label="Close" class="close">
+        <span aria-hidden="true">X</span>
+      </button>
+      Deze gegevens zijn niet geldig
+    </div>
+
+    <form class="form-signin">
+      <input autofocus class="form-control" id="inputEmail" ng-model="main.gebruiker" placeholder="Gebruiker" required>
+      <input class="form-control" id="inputPassword" ng-model="main.wachtwoord" placeholder="Wachtwoord" required type="password">
+
+      <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="main.loginnow()">login</button>
+    </form>
+    <!-- /form -->
+    <div class="signin-help">
+      <br>
+      <p>Gelieve in te loggen met uw gebruikersnaam en verkregen inlogcode</p>
+    </div><hr>
+
+  </div>
+</div>

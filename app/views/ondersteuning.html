@@ -1,0 +1,119 @@
+<hr>
+<div class="well">
+
+  <br>
+  <p>
+
+
+  <h1>Inlogs beheren</h1>
+  Hier kunt u accounts aanmaken in te zien voor groepen die aangemaakt zijn via het E-Learning platform.<br>
+  Gebruikers kunnen zich vervolgens aanmelden met
+  <code>
+    <b>Contactpersoon + wachtwoord</b>
+  </code></p>
+
+  <div class="alert alert-warning" role="alert">Een email adres is toegevoegd voor eigen administratie<br>De
+    <b>key</b>
+    kunt u niet veranderen, deze komt uit het leersysteem.<br><br>
+    <b>Let op:</b>
+    Er is maar 1 acount mogelijk per groep<br>. Contactpersoon + ww zijn verlicht
+    <b>Info: </b>het wachwoord wordt versleuteld opgeslagen.<br>
+  </div>
+
+  <div class="poempoem">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Groep</th>
+          <th>Bewerk</th>
+          <th>Contactpersoon</th>
+          <th>Email</th>
+          <th>Key</th>
+          <th>Wachtwoord</th>
+          <th>Info</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="groep in ondersteuning.groups">
+          <td>
+            <h4>
+              <font color="black">
+                {{ groep.name || 'Ontbreekt' }}
+              </font>
+            </h4>
+
+          </td>
+
+          <td>
+            <div style="padding:10px">
+              <form editable-form name="rowform" onaftersave="ondersteuning.updateRec($index,groep.id,groep.name,groep.contact,groep.email,groep.info,groep.ww)" ng-show="rowform.$visible" class="form-buttons form-inline">
+                <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                  opslaan
+                </button>
+                <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                  terug
+                </button>
+              </form>
+              <div class="buttons" ng-show="!rowform.$visible">
+                <button class="btn btn-primary" ng-click="rowform.$show()">Bewerk</button>
+              </div>
+
+            </div>
+          </td>
+
+          <td>
+            <div e-name="name" e-required e-form="rowform" editable-text="groep.contact">
+              {{ groep.contact || 'Contactpersoon ontbreekt' }}
+            </div>
+          </td>
+          <td>
+            <div e-form="rowform" editable-text="groep.email">
+              {{ groep.email || 'Email ontbreekt' }}
+            </div>
+          </td>
+          <td>
+            <div>
+              <font color="blue">
+                {{ groep.unique_key || 'Ontbreekt' }}
+              </font>
+            </div>
+          </td>
+          <td>
+            <div e-form="rowform" editable-text="groep.ww">
+              {{ 'Ingesteld' || 'Ontbreekt' }}
+            </div>
+          </td>
+          <td>
+            <div e-form="rowform" editable-text="groep.info">
+              {{ groep.info || '...' }}
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+
+    <h4></h4>
+    <h1>Rapport samenstelling</h1>
+    Hier kunt u aanvinken van welke toetsen u de punten wilt inzien de punten moeten worden getoond op de rapporten</p>
+    <div style="padding-left:10px !important">
+      <code>Het is wenselijk om alleen de toetsen te plaatsen bij 'Wel tonen'</code>
+    <multi-select
+      ng-model="ondersteuning.skipss.roles"
+      available="ondersteuning.roles"
+      selected-label="Wel tonen"
+      available-label="Niet tonen"
+      display="r as r.roleName"
+      title="r as r.roleDescription"
+      config="ondersteuning.selectConfig"
+      ng-change="testclick()"></multi-select></div>
+    <button class="btn btn-primary" ng-click="ondersteuning.updateSkip(groep.id)" type="button">
+      Rapport samenstelling opslaan
+    </button>
+    <br><br>
+
+</div>
