@@ -31,7 +31,8 @@
           <th>Key</th>
           <th>Wachtwoord</th>
           <th>Info</th>
-
+          <th>Sleutels totaal</th>
+          <th>Sleutels gebruikt</th>
         </tr>
       </thead>
       <tbody>
@@ -58,7 +59,6 @@
               <div class="buttons" ng-show="!rowform.$visible">
                 <button class="btn btn-primary" ng-click="rowform.$show()">Bewerk</button>
               </div>
-
             </div>
           </td>
 
@@ -84,9 +84,20 @@
               {{ 'Ingesteld' || 'Ontbreekt' }}
             </div>
           </td>
+        
           <td>
             <div e-form="rowform" editable-text="groep.info">
               {{ groep.info || '...' }}
+            </div>
+          </td>
+          <td>
+            <div>
+              {{ groep.key_max_usage || 'Niet ingesteld' }}
+            </div>
+          </td>
+          <td>
+            <div >
+              {{ groep.key_current_usage || 'Niet ingesteld' }}
             </div>
           </td>
 
