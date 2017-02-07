@@ -33,7 +33,7 @@ angular.module('dtsAdminApp')
 
     //TODO temporary solution = linked with "uitloggen"
     $scope.navvaway = function() {
-      console.log("en dan?");
+      //console.log("en dan?");
       $scope.navv = false;
       $location.path("/main");
     }
