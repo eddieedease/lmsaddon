@@ -117,13 +117,10 @@ angular.module('dtsAdminApp')
 
             for (var b = 0; b < self.userscores.length; b++) {
                 if (self.getusers.indexOf(self.userscores[b].users_LOGIN) != -1 && courseID === self.userscores[b].courses_ID) {
-
-
-
-
                     // making the right patches
                     for (var n = 0; n < self.users.length; n++) {
                         if (self.users[n].login === self.userscores[b].users_LOGIN) {
+
                             var realname = self.users[n].name + " " + self.users[n].surname;
                             // GEt date last inlog
                             var datecatch = '' + self.users[n].last_login + '000';
@@ -135,19 +132,16 @@ angular.module('dtsAdminApp')
                             var catch22 = parseInt(datecatch2);
                             var datetimer2 = new Date(catch22);
                             var lasttime2 = this.prettyDate(datetimer2);
-
-
-
-
-
                         }
                     };
 
-                    // TODO loop through --> FIND ID & Log in
-
+                    // TODO loop through --> FIND ID & Retrieve InlogKey
                     for (var k = 0; k < self.groupssss.length; k++) {
                         if (self.groupssss[k].id === self.userscores[b].courses_ID);
-                        console.log('we hebben een hit');
+                        console.log("CourseID = " + self.userscores[b].courses_ID);
+                        console.log("GROUPID = " +self.groupssss[k].id);
+                        console.log("KEYKEY = " +self.groupssss[k].unique_key);
+                        console.log("..");
                         var swam = self.groupssss[k].unique_key;
                     }
 

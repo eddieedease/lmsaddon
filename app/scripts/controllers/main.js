@@ -19,7 +19,6 @@ angular.module('dtsAdminApp')
 
     dtsWebservice.getxyr().then(function(dataResponse) {
       self.owow = dataResponse.data[1][0].ww;
-      console.log(self.owow);
       //self.users = dataResponse.data[0];
       self.qbrr = dataResponse.data[0];
     });

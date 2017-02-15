@@ -135,7 +135,7 @@ angular.module('dtsAdminApp')
             var upRec = $http({
                 method: "post",
                 ////TODO TODO TODO  switch onderstaande url: './api/chng.php' --  ' http://localhost:8888/dtsdts/app/api/chng.php ''
-                url: "./api/chng.php",
+                url: "http://localhost:80/dtsdts/app/api/chng.php",
                 data: {
                     id: idd,
                     bedrijf: bedrijff,

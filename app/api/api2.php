@@ -5,7 +5,7 @@
         // connect to the database
         $dbh = new PDO("mysql:host=$hostname;dbname=$db_name", $username, $password);
         // NOTE fixing the api over here
-        // NOTE 6 pieces [0] Users [1] Groups [2] Courses [3] Courses_to_groups [4] Users_to_courses [5] user_to_lessons
+        // NOTE 6 pieces [0] Users [1] Groups [2] Courses [3] Courses_to_groups [4] Users_to_courses [5] user_to_groups
 
 
         //NOTE USERS
