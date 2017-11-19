@@ -135,7 +135,7 @@ angular.module('dtsAdminApp')
             var upRec = $http({
                 method: "post",
                 ////TODO TODO TODO  switch onderstaande url: './api/chng.php' --  ' http://localhost:8888/dtsdts/app/api/chng.php ''
-                url: "http://localhost:80/dtsdts/app/api/chng.php",
+                url: "http://localhost:80/dtsadmin/app/api/chng.php",
                 data: {
                     id: idd,
                     bedrijf: bedrijff,
@@ -172,7 +172,7 @@ angular.module('dtsAdminApp')
             var upSkip = $http({
                 method: "post",
                 ////TODO TODO TODO  switch onderstaande url: './api/adjuvis.php' --  ' http://localhost:8888/dtsdts/app/api/adjuvis.php ''
-                url: "./api/adjuvis.php",
+                url: "http://localhost:80/dtsadmin/app/api/adjuvis.php",
                 data: {
                     id: idd,
                     skips: skippie
