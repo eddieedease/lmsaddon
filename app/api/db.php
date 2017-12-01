@@ -1,5 +1,5 @@
 <?php
-$db_name  = 'dtsecho2';
+$db_name  = 'dtsnikta';
 $hostname = 'localhost';
 $username = 'root';
 $password = 'root';

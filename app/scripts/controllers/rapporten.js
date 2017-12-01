@@ -9,30 +9,17 @@
  */
 angular.module('dtsAdminApp')
     .controller('RapportenCtrl', function(logger, dtsWebservice, $http, $location, $timeout) {
-
         if (logger.nda === null) {
             $location.path('/main');
         }
-
         var self = this;
         // set variables
         this.currentCourse = null;
         this.nameCurrentCourse = null;
-
         self.groups = [];
-
         self.rapporten = [];
-
         self.rapcopy = [];
-
         self.currentName = "";
-
-
-        //NOTE NOTE NOTE
-        // TODO TODO TODO OK HIER KLOPT NOG HELEMAAL NIKS VAN ,, FIXEN! TODO TODO TODO
-        //calling the service and do the math (also, inflict on 'self' (===this))
-
-
 
 
 
@@ -156,7 +143,6 @@ angular.module('dtsAdminApp')
                         "users_LOGIN": self.userscores[b].users_LOGIN,
                         "completed": self.userscores[b].completed,
                         "score": self.userscores[b].score,
-                        "sleutel": swam,
                         "last_login": lasttime,
                         "timestamp": lasttime2,
                     };

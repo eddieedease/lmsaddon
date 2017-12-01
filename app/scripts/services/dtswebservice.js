@@ -19,7 +19,7 @@ angular.module('dtsAdminApp')
       return $http({
         method: 'GET',
         //TODO TODO TODO  switch onderstaande url: './api/api2.php' --  ' http://localhost:80/dtsadminaddon/app/api/api2.php ''
-        url: 'http://localhost:8888/lmsaddon/app/api/api2.php',
+        url: './api/api2.php',
         params: {
           woobar: new Date().getTime()
         },
@@ -35,7 +35,7 @@ angular.module('dtsAdminApp')
       return $http({
         method: 'GET',
         //TODO TODO TODO  switch onderstaande url: './api/ipa.php' --  'http://localhost:8888/dtsdts/app/api/ipa.php''
-        url: 'http://localhost:8888/lmsaddon/app/api/ipa.php',
+        url: './api/ipa.php',
         params: {
           woobar: new Date().getTime()
         },
