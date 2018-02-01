@@ -39,11 +39,11 @@ angular.module('dtsAdminApp')
 
 
         dtsWebservice.getService().then(function(dataResponse) {
-            console.log(dataResponse);
+            
             self.users = dataResponse.data[0];
             self.groups = dataResponse.data[1];
             self.courses = dataResponse.data[2];
-            console.log(self.courses);
+            
             self.ryx();
 
         });
@@ -136,7 +136,7 @@ angular.module('dtsAdminApp')
             }
             var upRec = $http({
                 method: "post",
-                ////TODO TODO TODO  switch onderstaande url: './api/chng.php' --  ' http://localhost:8888/lmsaddon/app/api/chng.php ''
+                ////TODO TODO TODO  switch onderstaande url: './api/chng.php' --  ' http://localhost:80/lmsaddon/app/api/chng.php ''
                 url: "./api/chng.php",
                 data: {
                     id: idd,
@@ -173,7 +173,7 @@ angular.module('dtsAdminApp')
             var skippie = skipstempar.toString();
             var upSkip = $http({
                 method: "post",
-                ////TODO TODO TODO  switch onderstaande url: './api/adjuvis.php' --  ' http://localhost:8888/lmsaddon/app/api/adjuvis.php ''
+                ////TODO TODO TODO  switch onderstaande url: './api/adjuvis.php' --  ' http://localhost:80/lmsaddon/app/api/adjuvis.php ''
                 url: "./api/adjuvis.php",
                 data: {
                     id: idd,
